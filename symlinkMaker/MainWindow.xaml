@@ -1,0 +1,28 @@
+﻿<Window x:Class="symlinkMaker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:symlinkMaker"
+        mc:Ignorable="d"
+        Title="シンボリックリンク作成ツール（仮）" Height="480" Width="800">
+    <Grid>
+        <Grid>
+            <Label Content="作成元（ターゲット）" HorizontalAlignment="Left" Margin="74,73,0,0" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="textBox_src" AllowDrop="True" DragOver="textBox_src_DragOver" Drop="textBox_src_Drop" HorizontalAlignment="Left" Margin="74,112,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="529" Height="36" FontSize="24" />
+            <Button Content="参照" HorizontalAlignment="Left" Margin="657,112,0,0" VerticalAlignment="Top" Height="36" Width="103" FontSize="24" Click="Button_Open_src"/>
+        </Grid>
+
+        
+        
+        <Grid>
+            <Label Content="作成先" HorizontalAlignment="Left" Margin="74,208,0,0" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="textBox_dst" AllowDrop="True" DragOver="textBox_dst_DragOver" HorizontalAlignment="Left" Margin="74,247,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="529" Height="36" FontSize="24"/>
+            <Button Content="参照" HorizontalAlignment="Left" Margin="657,247,0,0" VerticalAlignment="Top" Height="36" Width="103" FontSize="24" Click="Button_Open_dst"/>
+        </Grid>
+
+        
+        <Button Content="作成！" HorizontalAlignment="Left" Margin="558,348,0,0" VerticalAlignment="Top" Height="67" Width="202" FontSize="36" Click="Button_mklink_Click" />
+
+    </Grid>
+</Window>
