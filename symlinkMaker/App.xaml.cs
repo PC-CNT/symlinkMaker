@@ -22,6 +22,7 @@ namespace symlinkMaker
         [STAThread]
         public static void Main()
         {
+            //管理者権限で起動するとD&Dが機能しなくなるという
 
             System.Security.Principal.WindowsIdentity windowsIdentity = System.Security.Principal.WindowsIdentity.GetCurrent();
             System.Security.Principal.WindowsPrincipal windowsPrincipal = new System.Security.Principal.WindowsPrincipal(windowsIdentity);
